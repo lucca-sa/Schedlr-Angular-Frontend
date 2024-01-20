@@ -1,2 +1,35 @@
-<p>task-board works!</p>
-<schedlr-frontend-task-card></schedlr-frontend-task-card>
+<div class="wrapper flex-center">
+  <h2>Task Board</h2>
+  <div class="task-buttons-div flex">
+    <button>New Task</button>
+  </div>
+  <main class="board flex">
+    <div class="state flex-center">
+      <h4>To Do</h4>
+      <div class="task-state flex">
+        @for (task of todo$ | async; track task.id){
+
+        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
+        }
+      </div>
+    </div>
+    <div class="state flex-center">
+      <h4>In Progress</h4>
+      <div class="task-state flex">
+        @for (task of inProgress$ | async; track task.id) {
+        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
+
+        }
+      </div>
+    </div>
+    <div class="state flex-center">
+      <h4>Done</h4>
+      <div class="task-state flex">
+        @for (task of done$ | async; track task.id) {
+          <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
+  
+          }
+      </div>
+    </div>
+  </main>
+</div>
