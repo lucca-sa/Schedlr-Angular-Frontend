@@ -26,9 +26,9 @@
       <h4>Done</h4>
       <div class="task-state flex">
         @for (task of done$ | async; track task.id) {
-          <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
-  
-          }
+        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
+
+        }
       </div>
     </div>
   </main>
