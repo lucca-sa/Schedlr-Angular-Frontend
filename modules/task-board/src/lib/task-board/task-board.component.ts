@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'schedlr-frontend-task-board',
@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './task-board.component.html',
   styleUrl: './task-board.component.css',
 })
-export class TaskBoardComponent {}
+export class TaskBoardComponent {
+  
+}
