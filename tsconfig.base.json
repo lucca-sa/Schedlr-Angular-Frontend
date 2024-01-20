@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@schedlr-frontend/task-board": ["modules/task-board/src/index.ts"]
+      "@schedlr-frontend/task-board": ["modules/task-board/src/index.ts"],
+      "@schedlr-frontend/task-card": ["modules/shared/task-card/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
