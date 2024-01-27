@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { TaskCardComponent } from '@schedlr-frontend/task-card';
 import { Observable } from 'rxjs';
 import { Task } from '../../../../shared/models/task';
-import { TasksService } from '../tasks-service/tasks-service.service';
+import { TasksService } from '../../../../shared/services/tasks-service.service';
 
 @Component({
   selector: 'schedlr-frontend-task-board',
