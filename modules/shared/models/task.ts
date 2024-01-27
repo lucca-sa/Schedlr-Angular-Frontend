@@ -3,4 +3,5 @@ export interface Task {
   title: string;
   status: 'todo' | 'inProgress' | 'done';
   color: string;
+  order: number;
 }

@@ -6,28 +6,25 @@
   <main class="board flex">
     <div class="state flex-center">
       <h4>To Do</h4>
-      <div class="task-state flex">
-        @for (task of todo$ | async; track task.id){
-
-        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
+      <div class="task-state flex" cdkDropList #todoTemplate="cdkDropList" [cdkDropListConnectedTo]="[inProgressTemplate, doneTemplate]" [cdkDropListData]="todo" (cdkDropListDropped)="onTaskDropped($event, 'todo')">
+        @for (task of todo ; track task.id){
+        <schedlr-frontend-task-card [task]="task" cdkDrag></schedlr-frontend-task-card>
         }
       </div>
     </div>
     <div class="state flex-center">
       <h4>In Progress</h4>
-      <div class="task-state flex">
-        @for (task of inProgress$ | async; track task.id) {
-        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
-
+      <div class="task-state flex" cdkDropList  #inProgressTemplate="cdkDropList" [cdkDropListConnectedTo]="[todoTemplate, doneTemplate]" [cdkDropListData]="inProgress" (cdkDropListDropped)="onTaskDropped($event, 'inProgress')">
+        @for (task of inProgress ; track task.order) {
+        <schedlr-frontend-task-card [task]="task" cdkDrag></schedlr-frontend-task-card>
         }
       </div>
     </div>
     <div class="state flex-center">
       <h4>Done</h4>
-      <div class="task-state flex">
-        @for (task of done$ | async; track task.id) {
-        <schedlr-frontend-task-card [task]="task"></schedlr-frontend-task-card>
-
+      <div class="task-state flex" cdkDropList #doneTemplate="cdkDropList" [cdkDropListConnectedTo]="[todoTemplate, inProgressTemplate]" [cdkDropListData]="done" (cdkDropListDropped)="onTaskDropped($event, 'done')">
+        @for (task of done ; track task.id) {
+        <schedlr-frontend-task-card [task]="task" cdkDrag></schedlr-frontend-task-card>
         }
       </div>
     </div>

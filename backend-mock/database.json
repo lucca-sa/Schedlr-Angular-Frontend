@@ -1,47 +1,25 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "title": "Work",
-            "status": "todo",
-            "color": "red"
-        },
-        {
-            "id": 2,
-            "title": "Coding",
-            "status": "inProgress",
-            "color": "blue"
-        },
-        {
-            "id": 3,
-            "title": "Whaaat",
-            "status": "todo",
-            "color": "red"
-        },
-        {
-            "id": 4,
-            "title": "conseguimo",
-            "status": "todo",
-            "color": "yellow"
-        }
-        ,
-        {
-            "id": 4,
-            "title": "conseguimo",
-            "status": "todo",
-            "color": "yellow"
-        },
-        {
-            "id": 4,
-            "title": "conseguimo",
-            "status": "todo",
-            "color": "yellow"
-        },
-        {
-            "id": 4,
-            "title": "conseguimo",
-            "status": "done",
-            "color": "yellow"
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Work",
+      "status": "done",
+      "color": "red",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "title": "Coding",
+      "status": "done",
+      "color": "blue",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "title": "Whaaat",
+      "status": "done",
+      "color": "red",
+      "order": 0
+    }
+  ]
 }
